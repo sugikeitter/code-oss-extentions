@@ -3,7 +3,7 @@
   "displayName": "Markdown List Continuation",
   "description": "Continue Markdown list markers on Enter (with empty-item dismissal and ordered-list auto-numbering), and adjust list indentation with Tab / Shift+Tab.",
   "version": "0.2.0",
-  "publisher": "sugikei",
+  "publisher": "sugikeitter",
   "private": true,
   "license": "MIT",
   "engines": {
