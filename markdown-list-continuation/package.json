@@ -1,0 +1,55 @@
+{
+  "name": "markdown-list-continuation",
+  "displayName": "Markdown List Continuation",
+  "description": "Continue Markdown list markers on Enter (with empty-item dismissal and ordered-list auto-numbering), and adjust list indentation with Tab / Shift+Tab.",
+  "version": "0.2.0",
+  "publisher": "sugikei",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "markdown",
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "markdownListContinuation.onEnter",
+        "title": "Markdown List Continuation: On Enter"
+      },
+      {
+        "command": "markdownListContinuation.onTab",
+        "title": "Markdown List Continuation: On Tab"
+      },
+      {
+        "command": "markdownListContinuation.onShiftTab",
+        "title": "Markdown List Continuation: On Shift+Tab"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "markdownListContinuation.onEnter",
+        "key": "enter",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == markdown && !suggestWidgetVisible && !inlineSuggestionVisible && !editorHasMultipleSelections && !inSnippetMode"
+      },
+      {
+        "command": "markdownListContinuation.onTab",
+        "key": "tab",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == markdown && !suggestWidgetVisible && !inlineSuggestionVisible && !editorHasMultipleSelections && !editorTabMovesFocus && !inSnippetMode && !hasSnippetCompletions && !hasOtherSuggestions"
+      },
+      {
+        "command": "markdownListContinuation.onShiftTab",
+        "key": "shift+tab",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == markdown && !suggestWidgetVisible && !inlineSuggestionVisible && !editorHasMultipleSelections && !editorTabMovesFocus && !inSnippetMode && !hasSnippetCompletions && !hasOtherSuggestions"
+      }
+    ]
+  }
+}
